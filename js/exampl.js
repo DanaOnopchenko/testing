@@ -1,9 +1,11 @@
-// Change code below this line
-function add(a, b, c) {
-  console.log(`Addition result equals ${a + b + c}`);
-  // Change code above this line
-}
+function isAdult(age) {
+  // Change code below this line
+  const passed = `${age}`;
 
-add(15, 27, 10);
-add(10, 20, 30);
-add(5, 10, 15);
+  // Change code above this line
+  return passed;
+}
+console.log(isAdult(20) >= 18);
+console.log(isAdult(14) >= 18);
+console.log(isAdult(8) >= 18);
+console.log(isAdult(37) >= 18);
