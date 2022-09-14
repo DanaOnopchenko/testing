@@ -1,7 +1,3 @@
-function formatMessage(message, maxLength) {
-  let result;
-  // Change code below this line
-
-  /// Change code above this line
-  return result;
-}
+let camper = "James";
+ camper = "David";
+console.log(camper);
