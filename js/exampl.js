@@ -1,87 +1,67 @@
-// function getExtremeElements(array) {
-//   // Change code below this line
-//     array = [array[0], array[array.length - 1]];
-//     return array;
-//   // Change code above this line
-// }
-// console.log(getExtremeElements([1, 2, 3, 4, 5]));
-// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
-// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
 
-// function splitMessage(message, delimiter) {
-//   let words;
-//   // Change code below this line
-//     words = message.split(delimiter);
-    
-//   // Change code above this line
-//   return words;
+//   return fruits.includes(fruit); // Change this line
 // }
-// console.log(splitMessage("Mango hurries to the train", " "));
-// console.log(splitMessage("Mango", ""));
-// console.log(splitMessage("best_for_week", "_"));
 
-// function calculateEngravingPrice(message, pricePerWord) {
-//    // Change code below this line
-//     let total = (message.split(' ').length) * pricePerWord;
-//     return total;
-     
+// console.log(checkFruit("plum"));
+// console.log(checkFruit("mandarin"));
+// console.log(checkFruit("pear"));
+// console.log(checkFruit("Pear"));
+// console.log(checkFruit("apple"))
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//     let newElements = [];
+//     for (let i = 0; i < array1.length; i += 1) {
+//         let newArray = array1[i];
+//         if (array2.includes(newArray))
+//             newElements.push(newArray)
+//     }
+      
+// return newElements
+//  // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//     let totalPrices = order;
+//     for (const totalPrice of totalPrices) {
+//         total += totalPrice;
+//     }
+// //   for (let i = 0; i < order.length; i += 1) {
+// //     total += order[i];
+// //   }
+
+//   // Change code above this line
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([]));
+
+function filterArray(numbers, value) {
+  // Change code below this line
+    const filteredNumbers = [];
    
-//    // Change code above this line
-// }
-// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
-// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
-// console.log(calculateEngravingPrice("Web-development is creative work", 20))
-// function makeStringFromArray(array, delimiter) {
-//   let string;
-//   // Change code below this line
+    for (let number of numbers) {
+        if (number > value) {
+            filteredNumbers.push(number);
 
-//     string = array.join(delimiter);
-
-//   // Change code above this line
-//   return string;
-// }
-// console.log(makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " "));
-// console.log(makeStringFromArray(["M", "a", "n", "g", "o"], ""));
-// console.log(makeStringFromArray(["top", "picks", "for", "you"], "_"))
-// .toLocaleLowerCase()
-
-// function slugify(title) {
-//   // Change code below this line
-//    const words = title.toLocaleLowerCase().split(' ').join("-");
- 
-// return words
-//   // Change code above this line
-// }
-// console.log(slugify("Arrays for begginers"));
-// console.log(slugify("English for developer"));
-// console.log(slugify("Ten secrets of JavaScript"));
-// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
-// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
-
-// // Change code below this line
-// const firstTwoEls = fruits.slice(0,2) ;
-// const nonExtremeEls = fruits.slice(1,4);
-// const lastThreeEls = fruits.slice(-3);
-// console.log(firstTwoEls);
-// console.log(nonExtremeEls);
-// console.log(lastThreeEls);
-
-// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
-// const newClients = ['Peach', 'Houston'];
-
-// const allClients = oldClients.concat(newClients); // Change this line
-// console.log(allClients)
-
-function makeArray(firstArray, secondArray, maxLength) {
-    // Change code below this line
-    const array = firstArray.concat(secondArray).slice(0,maxLength);
-    
-return array
-    // Change code above this line
+        }
+    }
+  return filteredNumbers;
+  // Change code above this line
 }
-console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
-console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
-console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3));
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2));
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4))
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0))
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
