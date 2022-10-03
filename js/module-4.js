@@ -954,7 +954,164 @@ const users = [
 // // Change code above this line
 // console.log(calculateTotalBalance(user))
 
-const user = [
+// Task 37
+// const user = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
+
+// // Change code below this line
+// const getTotalFriendCount = users => users.reduce((result, friend) =>
+// result = result + friend.friends.length,0)
+// // Change code above this line
+// console.log(getTotalFriendCount(user))
+
+// Task 38
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates =[...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+
+// Task 39
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates =[...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// Task 40
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder =[...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+// Task 41
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+// // const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+// //   firstBook.author.localeCompare(secondBook.author));
+// const sortedByAuthorName = [...books].sort((a,b)=>a.author.localeCompare(b.author));
+
+// const sortedByReversedAuthorName = [...books].sort((a,b)=>{b.author.localeCompare(a.author)});
+
+// const sortedByAscendingRating =[...books].sort((a,b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a,b) => b.rating - a.rating);;
+
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
+// Task 42
+const allUsers = [
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -1020,8 +1177,96 @@ const user = [
   }
 ]
 
+// // Change code below this line
+// const sortByAscendingBalance = users => users.sort((a,b) => a.balance - b.balance)
+   
+// ;
+// // Change code above this line
+
+// console.log(sortByAscendingBalance(allUsers))
+
+// Task 43
+
 // Change code below this line
-const getTotalFriendCount = users => users.reduce((result, friend) =>
-result = result + friend.friends.length,0)
-// Change code above this line
-console.log(getTotalFriendCount(user))
+// const sortByDescendingFriendCount = users =>[... users].sort((a, b) => b.friends.length - a.friends.length);
+// // const sortByDescendingFriendCount = users => {
+// //   const result = [...users].sort((a, b) => b.friends.length - a.friends.length)
+// //   return result
+// // }
+// // ;
+// // Change code above this line
+// console.log(sortByDescendingFriendCount(allUsers));
+// console.log(allUsers)
+
+// Task 44
+// Change code below this line
+// const sortByName = users => [...users].sort((a,b) => a.name.localeCompare(b.name));
+// // Change code above this line
+
+// console.log(sortByName(allUsers))
+
+// console.log(allUsers)
+
+// Task 45
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books].filter((book) => book.rating > MIN_BOOK_RATING).
+//   map(({ author }) => author).sort((a,b)=> a.localeCompare(b));
+
+// console.log(names)
+// console.log(books)
+
+// Task 46
+
+// // Change code below this line
+// const getNamesSortedByFriendCount = users => [...users].sort((a, b) => a.friends.length - b.friends.length).
+//   map(({ name }) => name);
+   
+
+// // Change code above this line
+
+// console.log(getNamesSortedByFriendCount(allUsers))
+
+// Task 47
+// Change code below this line
+// const getSortedFriends = users => [...users].flatMap(({ friends }) => friends)
+//   .filter((friend, index, array) => array.indexOf(friend) === index).sort();
+// // Change code above this line
+
+// console.log(getSortedFriends(allUsers))
+
+// Task 48
+
+// // Change code below this line
+// const getTotalBalanceByGender = (users, gender) => users.filter(users => users.gender === gender)
+//   .reduce((result, user) => {return result + user.balance; }, 0);
+
+// ;
+// // Change code above this line
+
+// console.log(getTotalBalanceByGender(allUsers, "female"))
