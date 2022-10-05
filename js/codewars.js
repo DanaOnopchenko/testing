@@ -17,33 +17,13 @@
 // }
 // console.log(greet("Anny", "Dan")
 
-// let arr = [1, 2, 3, 4, 5, 3, 2];
-// arr.reverce()
-// console.log(arr)
 
-// let str = '123456789';
-
-// let arr1 = str.split('');
-// let arr2 = arr1.reverse();
-// console.log(arr2);
-// function digitize(n) {
     
-//     let arr = [];
-//     for (let i = 0)
-//         // .split('')
-//         // .reverse();
-//     return str
-
-//   //code here
-// }
-
-console.log(digitize(11,13,14))
+// Task 3
 
 // function digitize(n) {
-//   let arr = [];
-//   for (let i = 0; i < n.length; i += 1) {
-//     arr.push(n[i]);
-//   }
-//   return arr;
+//   n = String(n).split('').reverse().map(Number);
+//   return n;
 // }
-// console.log(digitize(1235))
+
+// console.log(digitize(35231));
