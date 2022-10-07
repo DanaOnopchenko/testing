@@ -95,8 +95,43 @@
 // };
 // // Change code below this line
 
-// const child = {};
+// const child = Object.create(parent);
 
 // // Change code above this line
 // child.name = "Jason";
 // child.age = 27;
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(parent.hasOwnProperty("heritage"));
+// console.log(child.hasOwnProperty("name"));
+// console.log(child.name);
+// console.log(child.hasOwnProperty("age"));
+// console.log(child.age);
+// console.log(child.hasOwnProperty("surname"));
+// console.log(child.surname);
+// console.log(child.hasOwnProperty("heritage"));
+// console.log(child.heritage);
+// console.log(parent.isPrototypeOf(child));
+
+// Task 5ancestor.surname
+const ancestor = {
+  name: "Paul",
+  age: 83,
+  surname: "Dawson",
+  heritage: "Irish",
+};
+// Change code below this line
+
+const parent = Object.create(ancestor);
+parent.name = "Stacey";
+parent.surname = "Moore";
+parent.age = 54;
+
+const child = Object.create(parent);
+child.name = "Jason";
+child.age = 27;
+
+// Change code above this line
+
+console.log(ancestor.surname);
+console.log(parent.heritage);
+console.log(child.heritage)
