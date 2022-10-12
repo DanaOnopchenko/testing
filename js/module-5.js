@@ -214,34 +214,59 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 // task 11
-class StringBuilder { 
-  constructor(vinitialValue) { 
-    this.vinitialValue = vinitialValue;
-    this.value = vinitialValue;
+// class StringBuilder {
+//   constructor(vinitialValue) {
+//     this.vinitialValue = vinitialValue;
+//     this.value = vinitialValue;
+//   }
+//   getValue() {
+//     return this.value;
+//   }
+//   padEnd(str) {
+//     this.value = this.value + str;
+//   }
+//   padStart(str) {
+//     this.value = str + this.value ;
+//   }
+//   padBoth(str) {
+//     this.value = str + this.value + str;
+//   }
+// }
+
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+
+// Task 12
+class Car {
+  // Change code below this line
+
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.model = model;
+    this.price = price;
   }
-  getValue() { 
-    return this.value;
+  getBrand() { 
+    return this.#brand;
   }
-  padEnd(str) { 
-    this.value = this.value + str;
+  changeBrand(newBrand) { 
+    return this.#brand = newBrand;
   }
-  padStart(str) { 
-    this.value = str + this.value ;
-  }
-  padBoth(str) { 
-    this.value = str + this.value + str;
-  }
+  // Change code above this line
 }
-
-
-// Change code above this line
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+const newCar = new Car({
+  brand: "Audi",
+  model: "Q3",
+  price: 36000
+})
+// console.log(new Car({ brand: "Audi", model: "Q3", price: 36000 }));
 
 
