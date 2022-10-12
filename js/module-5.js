@@ -112,26 +112,105 @@
 // console.log(child.heritage);
 // console.log(parent.isPrototypeOf(child));
 
-// Task 5ancestor.surname
-const ancestor = {
-  name: "Paul",
-  age: 83,
-  surname: "Dawson",
-  heritage: "Irish",
-};
-// Change code below this line
+// Task 5
 
-const parent = Object.create(ancestor);
-parent.name = "Stacey";
-parent.surname = "Moore";
-parent.age = 54;
+// const ancestor = {
+//   name: "Paul",
+//   age: 83,
+//   surname: "Dawson",
+//   heritage: "Irish",
+// };
+// // Change code below this line
 
-const child = Object.create(parent);
-child.name = "Jason";
-child.age = 27;
+// const parent = Object.create(ancestor);
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
 
-// Change code above this line
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
 
-console.log(ancestor.surname);
-console.log(parent.heritage);
-console.log(child.heritage)
+// // Change code above this line
+
+// console.log(ancestor.surname);
+// console.log(parent.heritage);
+// console.log(child.heritage)
+
+// Task 7
+
+// class Car {
+//   // Change code below this line
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+
+//   }
+
+//   // Change code above this line
+// }
+// console.log(new Car("Audi", "Q3", 36000));
+// console.log(new Car("BMW", "X5", 58900));
+// console.log(new Car("Nissan","Murano", 31700))
+
+// Task 8
+
+// class Car {
+//   // Change code below this line
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code above this line
+// }
+// console.log(new Car({ brand: "Audi", model: "Q3", price: 36000 }));
+// console.log(new Car({ brand: "BMW", model: "X5", price: 58900 }));
+// console.log(new Car({ brand: "Nissan", model: "Murano", price: 31700 }));
+
+// Task 9
+
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code below this line
+//   getPrice() {
+//     return this.price;
+//   }
+//   changePrice(newPrice){
+//     this.price = newPrice;
+//   }
+
+
+//   // Change code above this line
+// }
+
+// Task 10
+class Storage { 
+  constructor(items) { 
+    this.items = items;  
+  }
+  getItems() { 
+    return this.items;
+  }
+  addItem(newItem) { 
+   this.items.push(newItem)
+
+  }
+  removeItem(itemToRemove) { 
+    this.items.splice(this.items.indexOf(itemToRemove), 1);
+     }
+}
+
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+
