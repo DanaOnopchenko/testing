@@ -556,20 +556,59 @@
 
 
 
-function nextInLine(arr, item) {
+// function nextInLine(arr, item) {
+//   // Змініть код лише під цим рядком
+//   arr.push(item);
+//   arr.shift();
+//   return item;
+//   // Змініть код лише над цим рядком
+// }
+
+// // Налаштування
+// const testArr = [1, 2, 3, 4, 5];
+
+// // Відобразити код
+// console.log("Before: " + JSON.stringify(testArr));
+// console.log(nextInLine(testArr, 6));
+// console.log("After: " + JSON.stringify(testArr));
+
+// console.log(nextInLine([], 5))
+
+// const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+// function golfScore(par, strokes) {
+//   // Змініть код лише під цим рядком
+//   if (strokes == 1) {
+//     return names[0]
+//   } else if (strokes <= par - 2) {
+//     return names[1]
+//   } else if (strokes == par - 1) {
+//     return names[2]
+//   } else if (strokes == par) {
+//     return names[3]
+//   } else if (strokes == par + 1) {
+//     return names[4]
+//   } else if (strokes == par + 2) {
+//     return names[5]
+//   } else if (strokes >= par + 3) {
+//     return names[6]
+//   }
+  
+//   // Змініть код лише над цим рядком
+// }
+
+// console.log(golfScore(4, 2));
+
+function caseInSwitch(val) {
+  let answer = "";
   // Змініть код лише під цим рядком
-  arr.push(item);
-  arr.shift();
-  return item;
+  switch{
+    
+  }
+
+
   // Змініть код лише над цим рядком
+  return answer;
 }
 
-// Налаштування
-const testArr = [1, 2, 3, 4, 5];
-
-// Відобразити код
-console.log("Before: " + JSON.stringify(testArr));
-console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));
-
-console.log(nextInLine([], 5))
+caseInSwitch(1);
