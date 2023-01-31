@@ -599,16 +599,16 @@
 
 // console.log(golfScore(4, 2));
 
-function caseInSwitch(val) {
-  let answer = "";
-  // Змініть код лише під цим рядком
-  switch{
+// function caseInSwitch(val) {
+//   let answer = "";
+//   // Змініть код лише під цим рядком
+//   switch{
     
-  }
+//   }
 
 
-  // Змініть код лише над цим рядком
-  return answer;
-}
+//   // Змініть код лише над цим рядком
+//   return answer;
+// }
 
-caseInSwitch(1);
+// caseInSwitch(1);
