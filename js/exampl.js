@@ -1,9 +1,25 @@
 
-const productName = "droid";
+// function helloWorld(){
+//     const str = "Hello World!"
+//     console.log(str)
+// }
+function printWordToScreen() {
+    
+  var somewords="This is an example."
+    return console.log(somewords)
+}
 
-const pricePerItem = "true";
-console.log(productName)
-console.log(pricePerItem)
+
+
+
+// const productName = "droid";
+
+// const pricePerItem = "true";
+
+
+
+// console.log(productName)
+// console.log(pricePerItem)
 
 // function includes(array, value) {
 //   // Change code below this line

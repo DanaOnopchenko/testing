@@ -29,8 +29,8 @@
 // console.log(digitize(35231));
 
 // Task 4
-function findNumbers(number) { 
-    return number % 2 === 0? "Even":"Odd"}
-console.log(findNumbers(4))
-console.log(findNumbers(350))
-console.log(findNumbers(111))
+// function findNumbers(number) { 
+//     return number % 2 === 0? "Even":"Odd"}
+// console.log(findNumbers(4))
+// console.log(findNumbers(350))
+// console.log(findNumbers(111))
