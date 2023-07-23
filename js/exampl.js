@@ -1,12 +1,22 @@
 
+// function myltiply(a, b) {
+//   return  2 * 4;
+//  }
+// myltiply()
 
-const pricePerItem = 3500;
-const orderedQuantity = 4;
+function multiply(x, y, z) {
+//   console.log(`Результат множення дорівнює ${x * y * z}`);
+   return x * y * z
+}
 
-// Change code below this line
-const totalPrice = pricePerItem * orderedQuantity;
+console.log(multiply(2,4,6))
+// const pricePerItem = 3500;
+// const orderedQuantity = 4;
 
-console.log(totalPrice)
+// // Change code below this line
+// const totalPrice = pricePerItem * orderedQuantity;
+
+// console.log(totalPrice)
 
 
 
