@@ -4,12 +4,12 @@
 //  }
 // myltiply()
 
-function multiply(x, y, z) {
-//   console.log(`Результат множення дорівнює ${x * y * z}`);
-   return x * y * z
-}
+// function multiply(x, y, z) {
+// //   console.log(`Результат множення дорівнює ${x * y * z}`);
+//    return x * y * z
+// }
 
-console.log(multiply(2,4,6))
+// console.log(multiply(2,4,6))
 // const pricePerItem = 3500;
 // const orderedQuantity = 4;
 
