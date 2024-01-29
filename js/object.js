@@ -170,13 +170,132 @@
  * { name: '🍓', price: 110 }
  */
 
-const cart = {
-  items: [],
-  getItems() {},
-  add(product) {},
-  remove(productName) {},
-  clear() {},
-  countTotalPrice() {},
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
+
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     this.items.push(product);
+//     product.quantity = 1;
+//   },
+//   remove(productName) {
+//     for (const item of this.items) {
+//       console.log(item);
+//       if (productName === item.name) {
+       
+//       }
+//     }
+//   },
+//   clear() { },
+  
+//   countTotalPrice() {
+//     let countTotalPrice = 0;
+//     for (const item of this.items) {
+           
+//       countTotalPrice += item.price;
+//     }
+//     return countTotalPrice;
+//   },
+//   increaseQuantity(productName) {
+//     // for (const item of this.items) {
+//     //   if (productName === item.name) {
+//     //     console.log(item.quantity);
+//     //     item.quantity += 1;
+//     //   }
+      
+//     // }
+//   },
+//   decreaseQuantity(productName) {},
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍓', price: 110 });
+
+// console.table(cart.getItems())
+
+// // cart.remove('🍓')
+
+// console.log(cart.countTotalPrice());
+
+// // console.log(cart.increaseQuantity('🍓'));
+
+
+// ===================================================================
+
+/*
+ * Операция spread (распыление)
+ * - Array.prototype.concat() и аналог через spread
+ */
+
+// const numbers = [1, 2, 3].concat([4, 5, 6], [7, 8, 9]);
+
+// const temps = [18, 14, 12, 21, 17, 29, 24];
+// console.log(Math.max(...temps));
+// console.log(Math.min(...temps));
+
+
+/*
+ * Сшиваем несколько массивов в один через concat() и spread
+ */
+
+// const lastWeekTemps = [1, 2, 3];
+// const currentTemps = [4, 5, 6];
+// const nextWeekTemps = [7, 8, 9];
+
+// const allTemps = [...lastWeekTemps,
+// ...currentTemps, ...nextWeekTemps];
+
+// console.log(allTemps);
+
+// const a = { a: 15, y: 5 };
+// const b = { b: 8, y: 13 };
+
+// const c = { ...a,b: 19, ...b, a: 7 };
+// console.log(c);
+
+
+/*
+ * Деструктуризация объекта
+ * - Значения по умолчанию
+ * - Имя переменной отличное от имени свойства
+ */
+
+const playlist = {
+  name: 'Мой супер плейлист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  trackCount: 3,
+};
+
+const {
+  rating,
+  tracks,
+  name,
+  trackCount: numberOfTracks = 0,
+  author = 'user',
+} = playlist;
+
+console.log(rating, tracks, name);
+
+
+/*
+ * Глубокая деструктуризация
+ */
+
+const profile = {
+  name: 'Jacques Gluke',
+  tag: 'jgluke',
+  location: 'Ocho Rios, Jamaica',
+  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
 };
