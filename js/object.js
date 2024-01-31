@@ -171,59 +171,105 @@
  */
 
 
-// const cart = {
-//   items: [],
-//   getItems() {
-//     return this.items;
-//   },
-//   add(product) {
-//     this.items.push(product);
-//     product.quantity = 1;
-//   },
-//   remove(productName) {
-//     for (const item of this.items) {
-//       console.log(item);
-//       if (productName === item.name) {
-       
-//       }
-//     }
-//   },
-//   clear() { },
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+
+    for (const item of this.items) { 
+      if (product.name === item.name) { 
+        item.quantity += 1;
+        return
+      }
+    }
+    const newProduct = {
+      ...product,
+      quantity: 1,
+    }
+    this.items.push(newProduct);
+    
+  },
+  remove(productName) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      const item = this.items[i];
+      // console.log('this item',item);
+      if (productName === item.name) {
+        // console.log('Wow!!!', productName);
+        this.items.splice(i, 1);
+      }
+    }
+  },
+  clear() {
+    this.items = [];
+  },
   
-//   countTotalPrice() {
-//     let countTotalPrice = 0;
-//     for (const item of this.items) {
-           
-//       countTotalPrice += item.price;
-//     }
-//     return countTotalPrice;
-//   },
-//   increaseQuantity(productName) {
-//     // for (const item of this.items) {
-//     //   if (productName === item.name) {
-//     //     console.log(item.quantity);
-//     //     item.quantity += 1;
-//     //   }
-      
-//     // }
-//   },
-//   decreaseQuantity(productName) {},
-// };
+  countTotalPrice() {
+    let countTotalPrice = 0;
+    for (const item of this.items) {
+          
+      countTotalPrice += item.price * item.quantity;
+    }
+    return countTotalPrice;
+  },
 
-// console.log(cart.getItems());
+  increaseQuantity(productName) {
+    // for (const item of this.items) {
+    //   console.log('this item', item);
+    //   if (productName === item.name) {
+    //     console.log("Wow", productName);
+    //     console.log(item.quantity);
+       
+    //     item.quantity += 1;
+    //     return 'YES!!!'
+    //   }
 
-// cart.add({ name: '🍎', price: 50 });
-// cart.add({ name: '🍋', price: 60 });
-// cart.add({ name: '🍋', price: 60 });
-// cart.add({ name: '🍓', price: 110 });
+    //   // cart.add();
+    // }
+    // return 'Sorry, we don`t find';
+  },
+    decreaseQuantity(productName) {
+      // for (let i = 0; i < this.items.length; i+=1) {
+      //   // const element = array[index];
+      //   const item = this.items[i];
+      //   console.log(item.name);
+      //   if (productName === item.name) { 
+      //     item.quantity -= 1;
+      //   } 
+      // }
+    },
+};
+  
 
-// console.table(cart.getItems())
 
-// // cart.remove('🍓')
+console.log(cart.getItems());
 
-// console.log(cart.countTotalPrice());
+cart.add({ name: '🍎', price: 50 });
+cart.add({ name: '🍋', price: 60 });
+cart.add({ name: '🍇', price: 70 });
+cart.add({ name: '🍓', price: 110 });
 
-// // console.log(cart.increaseQuantity('🍓'));
+console.table(cart.getItems());
+
+cart.remove('🍇');
+
+cart.add({ name: '🍓', price: 110 });
+
+// cart.clear();
+console.log(cart.getItems());
+
+cart.add({ name: '🍇', price: 70 });
+cart.add({ name: '🍇', price: 70 });
+console.log("total price:",cart.countTotalPrice());
+// cart.increaseQuantity('🍎');
+// cart.increaseQuantity('🍇');
+
+// cart.increaseQuantity({ name: '🍇', price: 70 });
+cart.add({ name: '🍋', price: 60 });
+cart.add({ name: '🍋', price: 60 });
+// cart.decreaseQuantity('🍎');
+console.table(cart.getItems());
 
 
 // ===================================================================
@@ -373,21 +419,21 @@
  */
 
 
-const showProfileInfo = function ({ name,tag,location,avatar,stats} ) { 
-  // const { name, tag, location, avatar,stats } = userProfile;
-console.log(name,tag,location);
-}
+// const showProfileInfo = function ({ name,tag,location,avatar,stats} ) { 
+//   // const { name, tag, location, avatar,stats } = userProfile;
+// console.log(name,tag,location);
+// }
 
-const profile = {
-  name: 'Jacques Gluke',
-  tag: 'jgluke',
-  location: 'Ocho Rios, Jamaica',
-  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
 
-showProfileInfo(profile)
+// showProfileInfo(profile);
