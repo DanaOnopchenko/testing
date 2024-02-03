@@ -331,40 +331,99 @@
 //  * @returns {String} Info about stock in company
 //  */
 
-function getStockReport({ companyName, stock }) { 
+// function getStockReport({ companyName, stock }) {
     
-    const values = Object.values(stock);
-    let total = 0;
-    for (const value of values) { 
-        total += value
-    }
-    return `${companyName}  has ${total} items in stock`
-};
+//     const values = Object.values(stock);
+//     let total = 0;
+//     for (const value of values) {
+//         total += value
+//     }
+//     return `${companyName}  has ${total} items in stock`
+// };
 
 
-console.log(
-    getStockReport({
-        companyName: 'Cyberdyne Systems',
-        stock: {
-            repairBots: 150,
-            defenceBots: 50,
-        },
-    }),
-); // "Cyberdyne Systems has 200 items in stock"
+// console.log(
+//     getStockReport({
+//         companyName: 'Cyberdyne Systems',
+//         stock: {
+//             repairBots: 150,
+//             defenceBots: 50,
+//         },
+//     }),
+// ); // "Cyberdyne Systems has 200 items in stock"
 
-console.log(
-    getStockReport({
-        companyName: 'Belacci',
-        stock: {
-            shoes: 20,
-            skirts: 10,
-            hats: 5,
-        },
-    }),
-); // "Belacci has 35 item in stock"
+// console.log(
+//     getStockReport({
+//         companyName: 'Belacci',
+//         stock: {
+//             shoes: 20,
+//             skirts: 10,
+//             hats: 5,
+//         },
+//     }),
+// ); // "Belacci has 35 item in stock"
 
 
 // ====================================================
 
 //  Task 5 (spread)
 // Доповни функцію createContact(partialContact) так, щоб вона повертала новий об'єкт контакту з доданою властивістю id, а також list зі значенням "default" якщо у partialContact немає такої властивості.
+
+
+// function createContact(partialContact) {
+//     return {
+//         id: generateId(),
+//         list: "default",
+//         ...partialContact,
+//     }
+// };
+// console.log(createContact({
+//     name: "Mango",
+//     email: "mango@mail.com",
+//     list:"friends",
+// }));
+// console.log(createContact({
+//     name: "Poly",
+//     email:"poly@mail.com",
+// }));
+
+// function generateId() {
+//     return '_' + Math.random().toString(36).substr(2, 9);
+// }
+
+
+// ================================================
+
+// Task 6 (rest)
+// Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
+
+// function transformUsername({firstName, lastName,...info }) { 
+
+//     return {
+//         fullname: `${firstName} ${lastName}`,
+//         ...info,
+//     }
+
+// };
+
+
+// console.log(
+//     transformUsername({
+//         id: 1,
+//         firstName: 'Jacob',
+//         lastName: 'Mercer',
+//         email: 'j.mercer@mail.com',
+//         friendCount: 40,
+//     }),
+// );
+
+
+// console.log(
+//     transformUsername({
+//         id: 2,
+//         firstName: 'Adrian',
+//         lastName: 'Cross',
+//         email: 'a.cross@hotmail.com',
+//         friendCount: 20,
+//     }),
+// );
