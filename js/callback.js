@@ -59,4 +59,38 @@
 
 // =====================================
 
+// const makeDish = function (sheffname, dish) { 
+//     console.log(`${sheffname} cook ${dish}`);
+// }
+
+// makeDish('mango','пирожок');
+// makeDish('mango', 'омлет');
+// makeDish('mango', 'чай');
+
+// makeDish('mango','котлеты');
+// makeDish('mango', 'soup');
+// makeDish('mango', 'coffee');
+
+
+// const makeSheff = function (name) {
+//     const makeDish = function (dish) { 
+//         console.log(`${name} cook ${dish}`)
+//     }
+//     return makeDish
+// };
+
+
+// const mango = makeSheff('Mango');
+// console.log(mango);
+
+// mango('пирожок');
+// mango('омлет');
+
+
+// const poly = makeSheff('Poly');
+
+// poly('coffee');
+
+
+
 
