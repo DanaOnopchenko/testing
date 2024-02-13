@@ -240,22 +240,22 @@
  * Собираем все теги из твитов
  */
 
-const tweets = [
-  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-  { id: '001', likes: 2, tags: ['html', 'css'] },
-  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-  { id: '003', likes: 8, tags: ['css', 'react'] },
-  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
-];
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
-const allTags = tweets.reduce((tags,tweet) => {
-  tags.push(...tweet.tags)
-  return tags
+// const allTags = tweets.reduce((tags,tweet) => {
+//   tags.push(...tweet.tags)
+//   return tags
 
-  // return [...tags,...tweet.tags]
-}, [])
+//   // return [...tags,...tweet.tags]
+// }, [])
  
-console.log(allTags);
+// console.log(allTags);
 
 
 /*
@@ -273,27 +273,83 @@ console.log(allTags);
 //   return acc
 // }, {})
 
-const tagsStats = allTags.reduce((acc,tag) => { 
+// const tagsStats = allTags.reduce((acc,tag) => {
  
-  if (acc[tag]) { 
-    acc[tag] += 1;
+//   if (acc[tag]) {
+//     acc[tag] += 1;
 
-    // return acc;
-    return {
-      ...acc,
-      [tag]:acc.tag+1
-    }
-  }
-  acc[tag] = 1;
-  // return acc
-  return {
-    ...acc,
-    [tag]:1
-  }
-}, {})
+//     // return acc;
+//     return {
+//       ...acc,
+//       [tag]:acc.tag+1
+//     }
+//   }
+//   acc[tag] = 1;
+//   // return acc
+//   return {
+//     ...acc,
+//     [tag]:1
+//   }
+// }, {})
 
-console.log(tagsStats);
+// console.log(tagsStats);
 
 // если свойство с ключом tag есть. увеличить его значение на 1
 // если свойствоства нет с таким ключом что в tag, сделать и записать 1
+
+// =======================================
+
+/*
+ * Array.prototype.sort(callback(currentEl, nextEl){})
+ * - Сортирует и ИЗМЕНЯЕТ оригинальный массив
+ * - По умолчанию:
+ *    - сортирует по возрастанию
+ *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
+ */
+
+const numbers = [1, 9, 6, 2, 3];
+// numbers.sort();
+console.log('numbers', numbers);
+
+
+// const letters = ['b', 'B', 'a', 'A'];
+// letters.sort();
+// console.log('letters', letters);
+
+/*
+ * compareFunction - функция сравнения (callback)
+ * Элементы массива сортируются в соответствии с её возвращаемым значением
+ *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
+ *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
+ *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
+ */
+
+
+// numbers.sort((curEl, nextEl) => {
+//   return nextEl - curEl;
+// })
+
+// console.log(numbers);
+
+
+/*
+ * Как сделать копию массива чтобы не сортировать оригинальный
+ * - Array.prototype.slice()
+ * - Операция spread
+ */
+
+// const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+// const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+
+
+/*
+ * Кастомная сортировка сложных типов
+ */
+const players = [
+    { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+    { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+    { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
+    { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+    { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+];
 
