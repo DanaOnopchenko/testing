@@ -307,9 +307,9 @@
  *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
  */
 
-const numbers = [1, 9, 6, 2, 3];
+// const numbers = [1, 9, 6, 2, 3];
 // numbers.sort();
-console.log('numbers', numbers);
+// console.log('numbers', numbers);
 
 
 // const letters = ['b', 'B', 'a', 'A'];
@@ -345,11 +345,110 @@ console.log('numbers', numbers);
 /*
  * Кастомная сортировка сложных типов
  */
-const players = [
-    { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
-    { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
-    { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
-    { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
-    { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
-];
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//     { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//     { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
 
+
+// const sortByBestPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+//     return prevPlayer.timePlayed - nextPlayer.timePlayed
+// })
+// console.table(sortByBestPlayers);
+
+
+// ===========================================
+
+/*
+ * Array.prototype.flat(depth)
+ * - Разглаживает массив до указанной глубины
+ * - По умолчанию глубина 1
+ */
+
+// const array = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
+// console.log(array.flat(3));
+
+// const tweets = [
+//     { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//     { id: '001', likes: 2, tags: ['html', 'css'] },
+//     { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//     { id: '003', likes: 8, tags: ['css', 'react'] },
+//     { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const tags = tweets.map(t => t.tags).flat();
+
+// const tags = tweets.flatMap(t => t.tags);
+// console.log(tags);
+
+// const tags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+// console.log(tags);
+
+
+// ==================================
+
+/*
+ * Цепочки вызовов - chaining
+ */
+
+const numbers = [1, 5, 2, 4, 3];
+
+// const greaterThenTwo = numbers.filter(num => num > 2);
+// console.log(greaterThenTwo);
+
+// const multBytree = greaterThenTwo.map(num => num * 3);
+// console.log(multBytree);
+
+// const sorted = multBytree.sort((a, b) => a - b);
+
+// const sorted = numbers
+//     .filter(num => num > 2)
+//     .map(num => num * 3)
+//     .sort((a, b) => a - b);
+
+// console.log(sorted);
+
+/*
+ * Сортируем тех кто онлайн по рангу
+ * - сначала фильтруем
+ * - потом сортируем
+ */
+
+// const players = [
+//     { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
+//     { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
+//     { id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100 },
+//     { id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400 },
+//     { id: 'id-5', tag: 'Chelsy', isOnline: false, rank: 200 },
+// ];
+
+// const onlineSorted = players.filter(player => player.isOnline).sort((a,b)=>a.rank-b.rank);
+
+// console.log(onlineSorted);
+
+/*
+ * Chaining в методах объекта как jquery
+ */
+
+// const element = {
+//     class: '',
+//     hovered: false,
+//     changeClass(cls) {
+//         this.class = cls;
+
+//         return this;
+//     },
+//     toggleHovered() {
+//         this.hovered = !this.hovered;
+
+//         return this;
+//     },
+// };
+
+// element.toggleHovered().changeClass('open').toggleHovered();
+// console.log(element);
+
+const logger = (msg)=> console.log(msg)

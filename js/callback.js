@@ -59,7 +59,7 @@
 
 // =====================================
 
-// const makeDish = function (sheffname, dish) { 
+// const makeDish = function (sheffname, dish) {
 //     console.log(`${sheffname} cook ${dish}`);
 // }
 
@@ -73,7 +73,7 @@
 
 
 // const makeSheff = function (name) {
-//     const makeDish = function (dish) { 
+//     const makeDish = function (dish) {
 //         console.log(`${name} cook ${dish}`)
 //     }
 //     return makeDish
@@ -93,4 +93,98 @@
 
 
 
+//  Example 1 - Коллбек функції
+// Напишіть такі функції:
 
+// createProduct(obj, callback) - приймає об'єкт товару без ID, а також колбек. Функція створює об'єкт товару, додаючи йому унікальний ідентифікатор як id і викликає колбек передаючи йому створений об'єкт.
+// logProduct(product) - коллбек, що приймає об'єкт продукту і логує його в консоль
+// logTotalPrice(product) - коллбек, що приймає об'єкт продукту і логує загальну вартість товару в консоль
+
+// function createProduct(partialProduct, callback) {
+//     const obj = {
+//         id: Date.now(),
+//         ...partialProduct,
+//     }
+//     callback(obj)
+//     // console.log(obj);
+// }
+
+// function logProduct(product) {
+// console.log(product);
+// };
+
+// function logTotalPrice({price,quantity}) {
+//        return price * quantity;
+// }
+
+// createProduct({
+//     name: '🍎',
+//     price: 30,
+//     quantity: 3,
+// }, logProduct);
+
+// createProduct({
+//     name: '🍋',
+//     price: 20,
+//     quantity: 5,
+// },logTotalPrice)
+
+
+// Example 2 - Коллбек функції
+// Додайте об'єкту account  методи з записом
+// withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError) де перший параметр це сума операції, а другий і третій - колбеки.
+// Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance та onSuccess в іншому випадку.
+// Метод deposit  викликає onError якщо amount більше TRANSACTION_LIMIT або меньше або дорівнює нулю, та onSuccess в іншому випадку.
+
+// const TRANSACTION_LIMIT = 1000;
+
+// const account = {
+//     username: "Jacob",
+//     balance: 2000,
+//     withdraw(amount, onSuccess, onError) {
+//         if (amount > this.balance) {
+//             onError('Мало коштів');
+//         }
+//         else if (amount > TRANSACTION_LIMIT) {
+//             onError('перевищенно лиміт');
+//         }
+//         else {
+//             this.balance -= amount;
+//             onSuccess(`Успіх! списано ${amount}. Залишок ${this.balance}`)
+//         }
+//     },
+//     deposit(amount, onSuccess, onError) {
+//         if (amount <=0) {
+//             onError('Значення має бути більше нуля')
+//         }
+//         else if (amount > TRANSACTION_LIMIT) {
+//              onError('перевищенно лиміт');
+//         } else {
+//             this.balance += amount;
+//             onSuccess(`Кошти успішно додані ${this.balance}`);
+//         }
+//     }
+// }
+
+// function handleSuccess(message) {
+//     console.log(`Success ${message}`);
+// }
+// function handleError(message) {
+//     console.log(`Error ${message}`);
+// }
+
+
+// account.withdraw(400, handleSuccess, handleError);
+// account.withdraw(400, handleSuccess, handleError);
+// account.withdraw(1500, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.withdraw(1500, handleSuccess, handleError);
+
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
+
+
+// Example 3 - Коллбек функції
+// Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами якого будуть результати виклику колббека.
