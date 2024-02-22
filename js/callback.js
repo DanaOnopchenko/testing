@@ -190,6 +190,128 @@
 // Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами якого будуть результати виклику колббека.
 
 
-function each(array, callback) { 
+// function each(array, callback) {
+//     for (const el of array) {
+//         console.log(callback(el));
+//     }
+// }
 
+// each([64, 49, 36, 25, 16], function (value) {
+//     return value * 2;
+// })
+
+// each([64, 49, 36, 25, 16], function (value) {
+//     return value - 10;
+// });
+    // each([64, 49, 36, 25, 16], function (value) {
+    //     return Math.sqrt(value);
+    // })
+// each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.ceil(value);
+// })
+
+// each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.floor(value);
+// })
+
+// =========================================
+
+// Example 4 - Стрілочні функції
+// Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+// function createProduct(partialProduct, callback) {
+//     const product = {
+//         id: Date.now(),
+//         ...partialProduct
+//     };
+//     callback(product);
+// }
+
+// const createProduct=(partialProduct, callback) => {
+//     const product = {
+//         id: Date.now(),
+//         ...partialProduct
+//     };
+//     callback(product);
+// }
+
+// const logProduct = product => console.log(product);
+
+// const logTotalPrice = product => console.log(product.price * product.quantity);
+
+// createProduct({
+//     name: '🍎',
+//     price: 30,
+//     quantity: 3
+// }, logProduct);
+
+// createProduct({
+//     name: '🍋',
+//     price: 20,
+//     quantity: 5
+// }, logTotalPrice);
+
+//  Example 5 - Стрілочні функції
+// Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+// const each = (array, callback) => {
+//     const newArr = [];
+//     for (const el of array) {
+//         newArr.push(callback(el));
+//     }
+//     return newArr;
+// }
+
+// // console.log(each([64, 49, 36, 25, 16], value => value * 2));
+
+// ===============================================
+
+// / Example 6 - Метод forEach
+// Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
+
+// const logItems = items=>
+//     items.forEach((item, idx) => console.log(`${idx + 1} - ${item}`));
+//     // for (let i = 0; i < items.length; i += 1) {
+//     //    console.log(`${i + 1} - ${items[i]}`);
+//     // }
+
+ 
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+//  Example 7 - Метод forEach
+// Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
+
+// const printContactsInfo = ({ names, phones })=> {
+//         const nameList = names.split(',');
+//     const phoneList = phones.split(',');
+//     // for (let i = 0; i < nameList.length , i < phoneList.length; i+=1) {
+//     //   console.log(`${nameList[i]}: ${phoneList[i]}`);
+//     // }
+
+//     nameList.forEach((el, idx) => {
+//         console.log(`${el} - ${phoneList[idx]}`);
+//      })
+// }
+
+//   printContactsInfo({
+//     names: 'Jacob,William,Solomon,Artem',
+//     phones: '89001234567,89001112233,890055566377',
+//   });
+
+// Example 8 - Метод forEach
+// Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
+
+
+const calсulateAverage = (...args) => { 
+    let total = 0;
+    args.forEach(num=>total+=num)
+    // for (let i = 0; i < args.length; i++) {
+    //     total += args[1];
+    // }
+    return total/args.length
 }
+
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
+console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
