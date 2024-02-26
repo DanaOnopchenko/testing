@@ -592,11 +592,323 @@ const users = [
 
 // === Task 26 ==========
 
-// Change code below this line
-const getActiveUsers = (users) => { 
-   return  users.filter(({ isActive }) => isActive).filter(user=>user.isActive);
+// // Change code below this line
+// const getActiveUsers = users =>
+//   users.filter(user =>user.isActive)
+//       // users.filter(user=>user.isActive);
+// // Change code above this line
+// console.log(getActiveUsers(users));
 
-}
-    // users.filter(user=>user.isActive);
-// Change code above this line
-console.log(getActiveUsers(users));
+// === Task 27======
+
+// Change code below this line
+// const getInactiveUsers = users =>
+//    users.filter(user=>!user.isActive);
+// // Change code above this line
+
+// console.log(getInactiveUsers(users));
+
+// ==== Task 28 ========
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books.find(book =>book.title===BOOK_TITLE);
+// const bookByAuthor = books.find(book => book.author === AUTHOR);
+
+// console.log(bookWithTitle);
+// console.log(bookByAuthor);
+
+// ==== Task 29 ========
+
+// Change code below this line
+
+// const getUserWithEmail = (users, email) =>
+//   users.find(user => user.email === email);
+// ;
+// // Change code above this line
+// console.log(getUserWithEmail(users,"blackburndotson@furnigeer.com"));
+
+// ==== Task 30 =====
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(num=>num%2===0);
+// const eachElementInFirstIsOdd = firstArray.every(num => num%2!==0);
+
+// const eachElementInSecondIsEven = secondArray.every(num=>num%2===0);
+// const eachElementInSecondIsOdd = secondArray.every(num => num%2!==0);
+
+// const eachElementInThirdIsEven = thirdArray.every(num=>num%2===0);
+// const eachElementInThirdIsOdd = thirdArray.every(num => num%2!==0);
+
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+
+
+// console.log(eachElementInSecondIsEven);
+// console.log(eachElementInSecondIsOdd);
+
+// console.log(eachElementInThirdIsEven);
+// console.log(eachElementInThirdIsOdd);
+
+// ==== Task 31 ======
+
+// // Change code below this line
+// const isEveryUserActive = users =>
+//    users.every(user=> user.isActive)
+// ;
+// // Change code above this line
+
+// console.log(isEveryUserActive(users));
+
+
+// ======= Task 32 =======
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(num => num%2===0);
+// const anyElementInFirstIsOdd = firstArray.some(num => num%2!==0);
+
+// const anyElementInSecondIsEven = secondArray.some(num => num%2===0);
+// const anyElementInSecondIsOdd = secondArray.some(num => num%2!==0);
+
+// const anyElementInThirdIsEven = thirdArray.some(num => num%2===0);
+// const anyElementInThirdIsOdd = thirdArray.some(num => num%2!==0);
+
+// console.log(anyElementInFirstIsEven);
+// console.log(anyElementInFirstIsOdd);
+
+// console.log(anyElementInSecondIsEven);
+// console.log(anyElementInSecondIsOdd);
+
+// console.log(anyElementInThirdIsEven);
+// console.log(anyElementInThirdIsOdd);
+
+
+// ===== Task 33 ============
+
+// // Change code below this line
+// const isAnyUserActive = users => users.some(user => user.isActive)
+// // Change code above this line
+
+// console.log(isAnyUserActive(users));
+
+
+// ====== Task 34 =======
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((prevValue, number) => prevValue + number, 0);
+// console.log(totalPlayTime);
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// console.log(averagePlayTime);
+
+// === task 35 ======
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((prevPlayTime, player) => {
+//   return prevPlayTime + player.playtime/player.gamesPlayed
+// }, 0);
+
+// console.log(totalAveragePlaytimePerGame);
+
+// ==== Task 36 =======
+
+// Change code below this line
+
+// const calculateTotalBalance = users =>
+//   users.reduce((prevBalance, user) => prevBalance + user.balance, 0);
+   
+// // Change code above this line
+// console.log(calculateTotalBalance(users));
+
+// === task 37 =====
+
+// // Change code below this line
+// const getTotalFriendCount = users => users.reduce((prevue, user)=> prevue + user.friends.length,0);
+// // Change code above this line
+
+// console.log(getTotalFriendCount(users));
+
+
+// ====== Task 38 ============
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// ==== Task 39 ========
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a,b)=> a-b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// ===== Task 40 =========
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a,b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+// ====== Task 41 ======
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((a,b)=> a.author.localeCompare(b.author));
+
+// const sortedByReversedAuthorName = [...books].sort((a,b)=> b.author.localeCompare(a.author));
+
+// const sortedByAscendingRating = [...books].sort((a,b)=>a.rating-b.rating );
+
+// const sortedByDescentingRating = [...books].sort((a,b)=>b.rating - a.rating);
+
+// console.table(sortedByAuthorName);
+// console.table(sortedByReversedAuthorName);
+// console.table(sortedByAscendingRating);
+// console.table(sortedByDescentingRating);
+
+
+// ===== Task 42 ===============
+
+// // Change code below this line
+// const sortByAscendingBalance = users => users.sort((a,b)=>a.balance - b.balance);
+// // Change code above this line
+
+// console.table(sortByAscendingBalance(users));
+
+
+// ===== Task 43 =============
+
+
+// // Change code below this line
+// const sortByDescendingFriendCount = users => [...users].sort((a, b) =>
+// b.friends.length - a.friends.length);
+// // Change code above this line
+
+// console.table(sortByDescendingFriendCount(users));
+//
+
+// ======= Task 44 =============
+
+// // Change code below this line
+// const sortByName = users => [...users].sort((a,b)=> a.name.localeCompare(b.name));
+// // Change code above this line
+
+// console.table(sortByName(users));
+
+// ======= Task 45 =============
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+// Change code below this line
+
+const names = books;
