@@ -65,32 +65,36 @@
  */
 
 
-class Car1 {
-    static description = 'Класс описывающий автомобиль';
-    static logInfo(carObj) {
-        console.log('Car.logInfo -> carObj', carObj);
-    }
-    #test = 'test';
-    constructor({ brend, model, price } = {}) {
-        this.brend = brend;
-        this._model = model;
-        this._price = price;
-    }
+// class Car1 {
+//     static description = 'Класс описывающий автомобиль';
+//     static logInfo(carObj) {
+//         console.log('Car.logInfo -> carObj', carObj);
+//     }
+//     #test = 'test';
+//     constructor({ brend, model, price } = {}) {
+//         this.brend = brend;
+//         this._model = model;
+//         this._price = price;
+//     }
 
-    changePrice(newPrice) { 
-        this.price = newPrice;
-    }
+//     changePrice(newPrice) {
+//         this.price = newPrice;
+//     }
 
-    updateModal(newModel) { 
-        this.model = newModel;
-    }
-}
-console.dir(Car1);
+//     updateModal(newModel) {
+//         this.model = newModel;
+//     }
+// }
+// console.dir(Car1);
 
-const carInstance = new Car1({
-    brend: 'Audi',
-    model: 'Q3',
-    price:'35000',
+// const carInstance = new Car1({
+//     brend: 'Audi',
+//     model: 'Q3',
+//     price:'35000',
 
-})
-Car1.logInfo(carInstance)
+// })
+// Car1.logInfo(carInstance)
+
+
+
+
